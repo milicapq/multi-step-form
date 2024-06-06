@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <input type="radio" name="page" checked value="first" />
+    <div class="sidebar">
+      <div class="numbers">
+        <p>1</p>
+        <span for="first">
+          <h5>STEP 1</h5>
+        </span>
+        <h4>YOUR INFO</h4>
+        <p>2</p>
+        <span for="second">
+          <h5>STEP 2</h5>
+        </span>
+        <h4>SELECT PLAN</h4>
+        <p>3</p>
+        <span for="third">
+          <h5>STEP 3</h5>
+        </span>
+        <h4>ADD-ONS</h4>
+        <p>4</p>
+        <span for="forth">
+          <h5>STEP 4</h5>
+        </span>
+        <h4>SUMMARY</h4>
+      </div>
+    </div>
+    <!-- first page -->
+    <div class="page first">
+      <div class="info">
+        <div class="form">
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+          <div class="placeholder">
+            <p>Name</p>
+            <input type="text" placeholder="e.g. Stephen King" name="name" required />
+            <p>Email Address</p>
+            <input type="text" placeholder="e.g. stephenking@lorem.com" name="email" required />
+            <p>Phone Number</p>
+            <input type="text" placeholder="e.g. +1 234 567 890" name="phone" required />
+            <div class="button">
+              <div class="next">
+                <label for="second" class="next">Next Step</label>
+                <input type="radio" id="second" name="page" value="second" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of first page -->
+    <!-- second page -->
+    <div class="page second">
+      <div class="header">
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+      </div>
+      <div class="gallery">
+        <div class="arcade">
+          <img src="./assets/images/icon-arcade.svg" />
+          <h6>Arcade</h6>
+          <p>$9/mo</p>
+          <p>$90/yr</p>
+          <p>2 months free</p>
+        </div>
+        <div class="advanced">
+          <img src="./assets/images/icon-advanced.svg" />
+          <h6>Advanced</h6>
+          <p>$12/mo</p>
+          <p>$120/yr</p>
+          <p>2 months free</p>
+        </div>
+        <div class="pro">
+          <img src="./assets/images/icon-pro.svg" />
+          <h6>Pro</h6>
+          <p>$15/mo</p>
+          <p>$150/yr</p>
+          <p>2 months free</p>
+        </div>
+      </div>
+      <div class="switch">
+        <p>Monthly</p>
+        <input type="checkbox" name="page" id="switch" />
+        <label for="switch">
+          <span></span>
+        </label>
+        <p>Yearly</p>
+      </div>
+      <div class="buttons">
+        <div class="back">
+          <label for="second1" class="next">Go back</label>
+          <input type="radio" id="second1" name="page" value="first" />
+        </div>
+        <div class="next">
+          <label for="third" class="next">Next Step</label>
+          <input type="radio" id="third" name="page" value="third" />
+        </div>
+      </div>
+    </div>
+    <!-- end of second page -->
+    <!-- third page -->
+    <div class="page third">
+      <div class="header">
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+      </div>
+      <div class="boxes">
+        <div class="box-one">
+          <label for="page-third">
+            <input type="checkbox" name="page" id="boxes" />
+            <div class="box-flex">
+              <div class="text">
+                <h5>Online service</h5>
+                <p>Access to multiplayer games</p>
+              </div>
+              <div>
+                <h6>+$1/mo</h6>
+                <h6>+$10/yr</h6>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div class="box-two">
+          <label for="page-third">
+            <input type="checkbox" name="page" id="boxes" />
+            <div class="text">
+              <h5>Larger storage</h5>
+              <p>Extra 1TB of cloud save</p>
+            </div>
+            <h6>+$2/mo</h6>
+            <h6>+$20/yr</h6>
+          </label>
+        </div>
+        <div class="box-three">
+          <label for="page-third">
+            <input type="checkbox" name="page" id="boxes" />
+            <div class="text">
+              <h5>Customizable Profile</h5>
+              <p>Custom theme on your profile</p>
+            </div>
+            <h6>+$2/mo</h6>
+            <h6>+$20/yr</h6>
+          </label>
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="back">
+          <label for="second4" class="next">Go back</label>
+          <input type="radio" id="second4" name="page" value="second" />
+        </div>
+        <div class="next">
+          <label for="forth" class="next">Next Step</label>
+          <input type="radio" id="forth" name="page" value="forth" />
+        </div>
+      </div>
+    </div>
+    <!-- end of third page -->
+    <!-- forth page -->
+    <div class="page fourth">
+      <div class="header">
+        <h1>Finishing up</h1>
+        <p>Double-check everything looks OK before confirming.</p>
+      </div>
+      <div class="paycheck">
+        <div class="top">
+          <div>
+            <h4>Arcade (Monthly)</h4>
+            <h4 class="none">Arcade(Yearly)</h4>
+            <label for="total-yr">
+              <h5><u>Change</u></h5>
+            </label>
+            <input class="check" type="checkbox" id="total-yr" />
+          </div>
+          <h4>$9/mo</h4>
+          <h4 class="none">$90/yr</h4>
+        </div>
+        <div class="bottom">
+          <div>
+            <h5>Online service</h5>
+            <h6>+$1/mo</h6>
+            <h6 class="none">+$10/yr</h6>
+          </div>
+          <div>
+            <h5>Larger Storage</h5>
+            <h6>+$2/mo</h6>
+            <h6 class="none">+$20/yr</h6>
+          </div>
+        </div>
+        <div class="total">
+          <h4>Total (per month)</h4>
+          <h4 class="none">Total(per year)</h4>
+          <h3>+12/mo</h3>
+          <h3 class="none">+120/yr</h3>
+        </div>
+        <div class="buttons">
+          <div class="back">
+            <label for="second2" class="next">Go back</label>
+            <input type="radio" id="second2" name="page" value="third" />
+          </div>
+          <div class="confirm">
+            <label for="second3" class="next">Confirm</label>
+            <input type="radio" id="second3" name="page" value="fifth" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of forth page -->
+    <!-- fifth page -->
+    <div class="page fifth">
+      <div class="header-fifth">
+        <img src="./assets/images/icon-thank-you.svg" />
+        <h1>Thank you!</h1>
+        <p> Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support,
+          please feel free to email us at support@loremgaming.com. </p>
+      </div>
+    </div>
+    </div>
+    <!-- end of fifth page -->
+  </main>
+</body>
+
+</html>
